@@ -1,0 +1,21 @@
+<main>
+    <section>
+        <h2>{{ title }}</h2>
+<table>
+	<thead>
+	<tr class="table-headers">
+    <th>Name</th>
+    <th>Department</th>
+    <th>Leave status</th>
+	</tr>
+	</thead>
+	<tbody>
+    <tr *ngFor="let staff of employees">
+      <td>{{ staff.name }}</td>
+      <td>{{ staff.Department }}</td>
+      <td class="status" [ngStyle]="{color: staff.status === 'Approved'? '#044342' : 'brown'}">{{ staff.status }}</td>
+    </tr>
+	</tbody>
+</table>
+    </section>
+</main>

@@ -1,0 +1,56 @@
+<div class="main">
+  <div class="container">
+    <section class="left">
+      <div class="daily-task"  (click)="openPopup()" title="click for your daily tasks">
+        <div class="text">
+          <p>Good morning User</p>
+          <h3>Check Your daily task & schedules</h3>
+        </div>
+        <div class="image">
+          <img src="../../assets/avatar-removebg.png" alt="" />
+        </div>
+      </div>
+      <div class="Activities">
+        <h2>Activities</h2>
+      </div>
+      <div class="task">
+        <h2>Today's Tasks</h2>
+        <table>
+          <thead>
+            <tr class="table-headers">
+              <th>Department</th>
+              <th>Stage</th>
+              <th>Assigned</th>
+              <th>Team</th>
+              <th>Date</th>
+              <th>status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HR</td>
+              <td>2nd</td>
+              <td>Kofi</td>
+              <td>team A</td>
+              <td><input type="date" /></td>
+              <td>in progress</td>
+            </tr>
+            <tr>
+              <td>HR</td>
+              <td>2nd</td>
+              <td>Kofi</td>
+              <td>team A</td>
+              <td><input type="date" /></td>
+              <td>in progress</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="right">
+        <div class="calendar">
+      <full-calendar [options]="calendarOptions" [events]=""></full-calendar>
+        </div>
+    </section>
+  </div>
+</div>

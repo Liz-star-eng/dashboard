@@ -1,0 +1,170 @@
+.main {
+    margin-left: 16%;
+    padding-top: 6%;
+
+    * {
+            box-sizing: border-box;
+        }
+    
+        section {
+            margin-top: 1rem;
+            width: 99%;
+        }
+    
+        .title {
+           display: flex;
+           justify-content: space-between;
+            // background-color: whitesmoke;
+            border-radius: 10px;
+            margin: 2px 0 0;
+            padding: 7px 1rem 1px;
+            box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+         h1 {
+            color: rgb(126, 5, 5);
+         }
+         input, button{
+            height: 30px;
+            border-radius: 5px;
+            outline: none;
+            // border: none;
+            background-color: #ffffff;
+         }
+         input::placeholder{
+            color: rgb(126, 5, 5);
+            font-style: italic;
+            padding-left: 10px;
+         }
+        
+         button {
+            display: flex;
+            line-height: 2;
+            color: rgb(126, 5, 5);
+         }
+                 button:hover {
+                    cursor: pointer;
+                 }
+         mat-icon {
+            line-height: 1;
+         }
+        }
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            overflow: hidden;
+            box-shadow: 5px 5px 5px #939393;
+            border-radius: 1px;
+    
+            td,
+            th {
+                border-top: 1px solid #ECF0F1;
+                padding: 10px;
+            }
+    
+            td {
+                border-left: 1px solid #ECF0F1;
+                border-right: 1px solid #ECF0F1;
+            }
+    
+            th {
+                background-color: #4ECDC4;
+             
+            }
+    
+            tr:nth-of-type(even) td {
+                background-color: lighten(#4ECDC4, 35%);
+            }
+    
+            .status {
+                font-weight: bold;
+            }
+        }
+    
+        .mobile-header {
+            display: none;
+        }
+    
+        @media only screen and (max-width: 760px) {
+            p {
+                display: block;
+                font-weight: bold;
+            }
+    
+            table {
+                tr {
+    
+                    td:not(:first-child),
+                    th:not(:first-child),
+                    td:not(.total-val) {
+                        display: none;
+                    }
+    
+                    &:nth-of-type(even) td:first-child {
+                        background-color: lighten(#4ECDC4, 35%);
+                    }
+    
+                    &:nth-of-type(odd) td:first-child {
+                        background-color: white;
+                    }
+    
+                    &:nth-of-type(even) td:not(:first-child) {
+                        background-color: white;
+                    }
+    
+                    th:first-child {
+                        width: 100%;
+                        display: block;
+                    }
+    
+                    th:not(:first-child) {
+                        width: 40%;
+                        transition: transform 0.4s ease-out;
+                        transform: translateY(-9999px);
+                        position: relative;
+                        z-index: -1;
+                    }
+    
+                    td:not(:first-child) {
+                        transition: transform 0.4s ease-out;
+                        transform: translateY(-9999px);
+                        width: 60%;
+                        position: relative;
+                        z-index: -1;
+                    }
+    
+                    td:first-child {
+                        display: block;
+                        cursor: pointer;
+                    }
+    
+                    &.total th {
+                        width: 25%;
+                        display: inline-block;
+                    }
+    
+                    td.total-val {
+                        display: inline-block;
+                        transform: translateY(0);
+                        width: 75%;
+                    }
+                }
+            }
+        }
+    
+        @media only screen and (max-width: 300px) {
+            table {
+                tr {
+                    th:not(:first-child) {
+                        width: 50%;
+                        font-size: 14px;
+                    }
+    
+                    td:not(:first-child) {
+                        width: 50%;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+}

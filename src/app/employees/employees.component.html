@@ -1,0 +1,37 @@
+<div class="main">
+    <section>
+      <div class="title">
+        <h1>{{ title }}</h1>
+        <input type="text" placeholder="search" [(ngModel)]="searchValue">
+        <button (click)="openPopup()"><mat-icon>add-circle</mat-icon> Add employee</button>
+      </div>
+    <p class="searchValue" *ngIf="searchValue != '' " [ngClass]="{boxColor: searchValue != '' }"> Search results for: "{{ searchValue }}" </p>
+<table>
+	<thead>
+	<tr class="table-headers">
+    <th>Name</th>
+    <th>Department</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>DoB</th>
+    <th>Profile</th>
+	</tr>
+	</thead>
+	<tbody>
+    <tr *ngFor="let user of users">
+      <td>
+        <span>{{ user.name?.firstname }}</span>
+        {{ user.name?.lastname }}
+      </td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.address }}</td>
+      <td>{{ user.dob }}</td>
+      <td><img [src]="user.image" alt="" width="50"></td>
+    </tr>
+	</tbody>
+</table>
+    </section>
+</div>

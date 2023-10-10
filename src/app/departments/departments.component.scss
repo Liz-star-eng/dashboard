@@ -1,0 +1,100 @@
+.main {
+  padding-top: 7rem;
+  margin-left: 16%;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .left {
+      width: 65%;
+
+      .daily-task {
+        display: flex;
+        justify-content: space-between;
+        background-color: #09649c;
+        width: 100%;
+        color: white;
+        padding: 0 1rem;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+        p{
+            margin-top: 2rem;
+        }
+        
+        h3{
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        img {
+          margin-top: -60px;
+          width: 230px;
+          margin-bottom: 0;
+        }
+      }
+           .daily-task:hover {
+            background-color: #054f7e;
+            transition: 0.5s;
+            cursor: pointer;
+           }
+
+      .Activities {
+        margin-top: 1rem;
+        border: 1px solid #044342;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
+        padding: 10px 1rem;
+      }
+      .task {
+        margin-top: 1rem;
+      }
+          table {
+              width: 100%;
+              border-collapse: collapse;
+              text-align: left;
+              overflow: hidden;
+              box-shadow: 5px 5px 5px #939393;
+              border-radius: 1px;
+              padding: 10px 2rem;
+            tr {
+                border-radius: 10px;
+            }
+              td,
+              th {
+                //   border-top: 1px solid #ECF0F1;
+                padding: 10px 1rem;
+              }
+    
+              td {
+                border-top: 1px solid #ECF0F1;
+                  border-bottom: 1px solid #ECF0F1;
+                  border-collapse: collapse;
+              }
+    td input {
+        border: none;
+    }
+    
+              tr:nth-of-type(even) td {
+                  background-color: lighten(#4ECDC4, 35%);
+              }
+    
+              .status {
+                  font-weight: bold;
+              }
+          }
+    }
+
+    .right {
+      width: 30%;
+    
+    border-radius: 5px;
+      margin-right: 5px;
+      .calendar {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: whitesmoke;
+      }
+    }
+  }
+}

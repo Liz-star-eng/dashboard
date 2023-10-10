@@ -1,0 +1,43 @@
+<div class="sideBar">
+  <div class="nav-items">
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="nav-item"
+    >
+      <mat-icon> dashboard </mat-icon>
+      <span>Dashboard</span>
+    </a>
+    <a routerLink="/employees" routerLinkActive="active" class="nav-item">
+      <mat-icon> groups </mat-icon>
+      <span>Employees</span>
+    </a>
+    <a routerLink="/departments" routerLinkActive="active" class="nav-item">
+      <mat-icon> window </mat-icon>
+      <span>Department</span>
+    </a>
+    <a routerLink="/events" routerLinkActive="active" class="nav-item">
+      <mat-icon> calendar_month </mat-icon>
+      <span>Events</span>
+    </a>
+    <a routerLink="/projects" routerLinkActive="active" class="nav-item">
+      <mat-icon> bolt </mat-icon>
+      <span>Projects</span>
+    </a>
+    <!-- <a routerLink="/statistics" routerLinkActive="active" class="nav-item">
+      <mat-icon> monitoring </mat-icon>
+      <span>Statistics</span>
+    </a> -->
+    <!-- <a routerLink="/" routerLinkActive="active" class="nav-item">
+      <mat-icon> contacts </mat-icon>
+      <span>Contact</span>
+    </a> -->
+    <a routerLink="/help" routerLinkActive="active" class="nav-item">
+      <mat-icon> help_center </mat-icon>
+      <span>Help</span>
+    </a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
